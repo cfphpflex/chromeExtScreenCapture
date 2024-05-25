@@ -7,12 +7,12 @@ chrome.action.onClicked.addListener((tab) => {
         return;
     }
 
-    console.log("Extension icon clicked. Injecting html2canvas script into the page...");
+    console.log("Extension icon clicked. Injecting scripts into the page...");
     chrome.scripting.executeScript({
         target: { tabId: tab.id },
         files: ['libs/html2canvas.min.js']
     }, () => {
-        console.log("html2canvas script injected. Executing captureDiv function...");
+        console.log("Scripts injected. Executing captureDiv function...");
         chrome.scripting.executeScript({
             target: { tabId: tab.id },
             function: captureDiv

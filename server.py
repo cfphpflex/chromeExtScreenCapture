@@ -20,7 +20,7 @@ def save_image():
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)}), 400
 
-    file_path = Path('/Users/amilvila/PycharmProjects/trade_soxl_soxs/pythonProject1/15_minute_json/captured_image.png')
+    file_path = Path('/Users/amilvila/PycharmProjects/trade_soxl_soxs/pythonProject1/15_minute_json/15_minute_SOXL.png')
     with open(file_path, 'wb') as f:
         f.write(image_data)
 
