@@ -47,6 +47,6 @@ python server.py
 Make sure to adjust the file paths and URLs as needed to fit your specific setup. This README provides step-by-step instructions for setting up and using the Chrome extension and the Flask server.
 create image with S label
 
-cd /Users/amilvila/WebstormProjects/chromeExtScreenCapture/PriceVIX/images
+cd /chromeExtScreenCapture/PriceVIX/images
  convert icon16.png -resize 800x600 output.jpg
 
