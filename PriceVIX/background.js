@@ -22,7 +22,7 @@ chrome.action.onClicked.addListener((tab) => {
 
 function captureDiv() {
     console.log("captureDiv function executed. Looking for the specified div...");
-    const div = document.querySelector('.layout__area--center');
+    const div = document.querySelector('.chart-container-border');
     if (!div) {
         console.error('Div not found');
         return;
