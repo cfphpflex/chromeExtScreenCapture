@@ -20,11 +20,11 @@ def save_image():
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)}), 400
 
-    file_path = Path('/Users/amilvila/PycharmProjects/trade_soxl_soxs/pythonProject1/15_minute_json/15_minute_SOXL_SQZMom.png')
+    file_path = Path('/Users/amilvila/PycharmProjects/trade_soxl_soxs/pythonProject1/15_minute_json/15_minute_SQZM.png')
     with open(file_path, 'wb') as f:
         f.write(image_data)
 
     return jsonify({'status': 'success', 'path': str(file_path)})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5001, debug=True)

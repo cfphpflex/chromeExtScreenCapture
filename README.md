@@ -42,11 +42,36 @@ cd screen-capture-extension
 
 
 
-python server.py
+cd ./PriceVIX/
+cd ./SQZMom/
+cd ./ADX/
+
+
+./release_and_restart.sh
 
 Make sure to adjust the file paths and URLs as needed to fit your specific setup. This README provides step-by-step instructions for setting up and using the Chrome extension and the Flask server.
 create image with S label
 
-cd /chromeExtScreenCapture/PriceVIX/images
- convert icon16.png -resize 800x600 output.jpg
+Make the images
+A bar chart with green bars on the left and red bars on the right, overlayed with a large white capital letter 'V' in the center.
+A bar chart with green bars on the left and red bars on the right, overlayed with a large white capital letter 'V' in the center.
+Make black square image with white capital V
+
+copy images to right size per chrome extension manifest.json
+Requires imageMagic to resize images
+brew install imagemagick
+
+   "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+    
+cd ./../../PriceVIX/images
+cd ./../../SQZMom/images
+cd ./../../ADX/images
+
+convert default.png -resize 16x16 icon16.png
+convert default.png -resize 48x48 icon48.png
+convert default.png -resize 128x128 icon128.png
 
